@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/blankFragmentHome">
+
+    <fragment
+        android:id="@+id/blankFragmentHome"
+        android:name="com.danielnoach.thirdlesson.BlankFragmentHome"
+        android:label="fragment_blank_home"
+        tools:layout="@layout/fragment_blank_home" >
+        <action
+            android:id="@+id/action_blankFragmentHome_to_blankFragmentreg"
+            app:destination="@id/blankFragmentreg" />
+        <action
+            android:id="@+id/action_blankFragmentHome_to_blankFragmentlog"
+            app:destination="@id/blankFragmentlog" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentreg"
+        android:name="com.danielnoach.thirdlesson.BlankFragmentreg"
+        android:label="fragment_blank_fragmentreg"
+        tools:layout="@layout/fragment_blank_fragmentreg" >
+        <argument
+            android:name="emailuser"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="passworduser"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentlog"
+        android:name="com.danielnoach.thirdlesson.BlankFragmentlog"
+        android:label="fragment_blank_fragmentlog"
+        tools:layout="@layout/fragment_blank_fragmentlog" />
+</navigation>
